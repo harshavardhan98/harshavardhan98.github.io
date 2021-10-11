@@ -1,10 +1,13 @@
-baseURL = 'http://example.org/'
-title = 'My New Hugo Site'
-theme='bearblog'
+
+baseURL = "https://example.com"
+
+# The name of this wonderful theme ;-).
+theme = 'bearblog'
 
 # Basic metadata configuration for your blog.
-author = "Harshavardhan,P"
-copyright = "Copyright © 2021, Harshavardhan P"
+title = "Harshavardhan's ʕ•ᴥ•ʔ Blog"
+author = "Harshavardhan P"
+copyright = "Copyright © 2020, Jane Doe."
 languageCode = "en-US"
 
 # Generate a nice robots.txt for SEO
