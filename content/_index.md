@@ -1,13 +1,10 @@
-# Hi! Welcome to my blog :)
+# Hi! I am Harshavardhan 
 
-This is Harshavardhan. I am a software engineer in Citi. I love programming, economics and design.
-I vent out of my thoughts over here. Hope you enjoy reading my blog
+I am a software engineer with a passion for open source development. I love programming, economics and design. I reflect on life, work and passion in this blog. Have a great time reading it !!
 
+[email](harshavardhan.parandaman@gmail.com) | [github](https://github.com/harshavardhan98) | [linkedin] (https://www.linkedin.com/in/harshavardhan-p/) | [resume](static/files/resume.pdf)
 
-
-
-
-
+*Updated On: 14th October*
 
 
 

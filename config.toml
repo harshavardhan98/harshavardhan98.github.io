@@ -5,9 +5,9 @@ baseURL = "https://harshavardhan98.github.io/"
 theme = 'bearblog'
 
 # Basic metadata configuration for your blog.
-title = "Harshavardhan's ʕ•ᴥ•ʔ Blog"
+title = "பிரதிபலிப்பு - Reflections"
 author = "Harshavardhan P"
-copyright = "Copyright © 2020, Jane Doe."
+copyright = "Copyright © 2020, Harshavardhan, P"
 languageCode = "en-US"
 
 # Generate a nice robots.txt for SEO
