@@ -34,7 +34,65 @@ GC metrics tells how hard JVM is working to tame the memory
 
 -**Average GC duration**: jvm_gc_pause_seconds_sum / jvm_gc_pause_seconds_count - total time spent in GC divided by the number of GC collections provides the average GC pause time. A sustained increase in average GC pause is a red-flag.
 
--**
+-**Max GC Pause**: This metric will provide the highest GC pause in the window. If this spikes from 50ms to 500ms, this will have a huge impact on the overall latency of the API
+
+### PromQL Queries:
+```PromQL
+# Old gen usage over time - look for upward-trending sawtooth
+jvm_memory_used_bytes{id="Tenured Gen"} / jvm_memory_max_bytes{id="Tenured Gen"}
+
+# Average GC pause duration (5m window)
+rate(jvm_gc_pause_seconds_sum[5m]) / rate(jvm_gc_pause_seconds_count[5m])
+
+# GC Frequency - number of collections per minute
+rate(jvm_gc_pause_seconds_count[5m]) * 100
+
+# Heap Usage Ratio - set altert if above 85%
+jvm_memory_used_bytes{area="heap"} / jvm_memory_max_bytes{area="heap"}
+```
+
+### Good references for understanding JVM, GC and memory monitoring:
+[Plumbr's blog on memory leak](https://medium.com/@plumbr/memory-leaks-fallacies-and-misconce-8c79594a3986)
+[Garbage Collection Patterns](https://blog.gceasy.io/interesting-garbage-collection-patterns/)
+[Uber JVM's memory tuning](https://www.uber.com/en-IN/blog/jvm-tuning-garbage-collection/)
+[Datadog GC deep dive](https://www.datadoghq.com/blog/understanding-java-gc/)
+
+## 2. Thread Metrics
+Thread metrics are the vital signs of your application's concurrency model. A release that introduces a blocking calls, lock contention issue or thread pool misconfiguration can be diagnozed using the below metrics.
+
+**jvm_threads_live_threads** - This metric gives the total active threads. If this jumps post-release and doesn't come back down, you are probably creating a lot of threads without proper shutdown
+
+**jvm_threads_daemon_threads** - Daemon threads die when the JVM exits. A sudden increase usually means a new background task or connection pool was introduced.
+
+**jvm_threads_peak_threads** - This metric provides the peak thread count since the JVM start. Helps us understand application's burst behaviour and capacity planning. If the value of the metrics is consistently close to a hard limit, it may indicate a need to adjust thread pool configurations.
+
+**jvm_threads_states_threads** - This metrics provides the number of threads which are in different states - RUNNABLE, BLOCKED, WAITING/TIMED_WAITING
+
+RUNNABLE - number of threads which are actively doing work
+BLOCKED  - number of threads waiting to enter a synchronized block. If this is high, you have lock contention. A release that adds a   synchronized keyword in ahot path can tank throughput
+WAITING/TIMED_WAITING - number of threads waiting on I/O, sleep, or condition variables. Normal for thread pools sitting idle. Abnormal if the count is climbing - means threads are waiting and never coming back
+
+### PromQL Queries:
+```PromQL
+# BLOCKED thread count - should be near zero
+jvm_threads_states_threads{state="blocked"}
+
+# Thread count growth rate - should be flat in steady state
+deriv(jvm_threads_live_count[30m])
+
+# Ratio of BLOCKED to total threads - alert if > 0.1
+jvm_threads_states_threads{state="blocked"} / jvm_threads_live_threads
+
+# Waiting threads - compared to baseline
+jvm_threads_states_threads{state="waiting"} + jvm_threads_states_threads{state="timed-waiting"}
+```
+
+**Patterns to fear**: BLOCKED thread goes from near zero to double digits. Throughput will be affected significantly even though CPU usage might be low when there is high thread contention. 
+
+
+### References for understanding threads and its states
+[Java Thread states](https://blog.fastthread.io/java-suspended-thread-states-blocked-waiting-timed_waiting/)
+[Java Thread Dump Analysis](https://dzone.com/articles/how-analyze-java-thread-dumps)
 
 ### References:
 1. https://copyconstruct.medium.com/monitoring-and-observability-8417d1952e1c
