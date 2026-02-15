@@ -94,7 +94,7 @@ jvm_threads_states_threads{state="waiting"} + jvm_threads_states_threads{state="
 [Java Thread states](https://blog.fastthread.io/java-suspended-thread-states-blocked-waiting-timed_waiting/) <br/>
 [Java Thread Dump Analysis](https://dzone.com/articles/how-analyze-java-thread-dumps)
 
-### 3. Class loading metrics
+## 3. Class loading metrics
 These metrics helps us to peek through runtime class creation by libraries/framework like Spring
 
 **jvm_classes_loaded_classes** - Number of classes currently loaded. Should stabilize after startup, if it keeps growing with traffic then it is possible some library is dynamically generating classes at runtime (reflection, proxies, scripting engines, groovy template)
@@ -116,7 +116,7 @@ jvm_classes_loaded_classes - jvm_classes_unloaded_classes_total
 
 **Patterns to fear**: When we add a new dependency that does bytecode generation, uses dymaic proxies or custom classloading which are common with ORMs, serialization libraries etc, we need to keep track of these metrics when we introduce them
 
-### 4. JVM Compilation
+## 4. JVM Compilation
 JVM will compile the hotpath bytecode to native code. This will take some time, so if we are comparing latency between the old and new release we should taking into consideration the time taken to warm up the JVM.
 
 jvm_compilation_time_milliseconds_total - Cumulative time spent compiling, in the first few minutes after deploying the JVM, this metric will climb fast and latency might take a hit. 
@@ -138,12 +138,13 @@ If the JVM takes a lot of time to warmup, we might need to start to intentionall
 [Baeldung's JVM warmup](https://www.baeldung.com/java-jvm-warmup)
 [Unpredicatability in JVM warmup](https://tratt.net/laurie/blog/2022/more_evidence_for_problems_in_vm_warmup.html)
 
-### Gotchas:
+
+## Gotchas:
 - JVM warmup
 - Interpretation of GC metrics in AOT based JVM like Graal JVM
 
 
-### References:
+## References:
 1. https://copyconstruct.medium.com/monitoring-and-observability-8417d1952e1c
 2. https://softwareengineeringdaily.com/2021/02/04/debunking-the-three-pillars-of-observability-myth/
 3. https://thenewstack.io/observability-wont-replace-monitoring-because-it-shouldnt/
