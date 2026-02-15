@@ -40,12 +40,12 @@ As systems become more distributed and complex, the number of potential failure 
 ### Building Observability into Your Systems
 Getting started with observability involves collecting the right data, setting up the appropriate tools, and fostering a culture where teams actively use and respond to the insights provided. We need to instrument our existing systems with auto instrumentation agents like OTEL agent or integrating libraries to export prometheus/otel format metrics. 
 
-**Start Small:** Begin by implementing basic logging in your applications.
-**Choose Your Tools:** There are many observability tools available, both open-source and commercial. Popular choices include Prometheus, Grafana, and Jaeger.
-**Define What's Important:** Identify the key metrics and events that are most crucial for your system's health and performance.
-**Implement Instrumentation:** Add code to your applications to collect and send observability data.
-**Visualize Your Data:** Use dashboards to make your observability data easy to understand and act upon.
-**Foster a Culture of Observability:** Encourage your team to use observability data in their daily work and decision-making processes.
+**Start Small:** Begin by implementing basic logging in your applications. <br/>
+**Choose Your Tools:** There are many observability tools available, both open-source and commercial. Popular choices include Prometheus, Grafana, and Jaeger. <br/>
+**Define What's Important:** Identify the key metrics and events that are most crucial for your system's health and performance. <br/>
+**Implement Instrumentation:** Add code to your applications to collect and send observability data. <br/>
+**Visualize Your Data:** Use dashboards to make your observability data easy to understand and act upon. <br/>
+**Foster a Culture of Observability:** Encourage your team to use observability data in their daily work and decision-making processes. <br/>
 
 
 ### References:
