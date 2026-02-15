@@ -23,12 +23,15 @@ I recently wrapped up my Master's in CS from Georgia Tech (OMSCS) while working 
 
 ### Listening to
 
-Favourite podcasts: [Seen and Unseen](https://seenunseen.in/) by Amit Varma, [Everything is Everything](https://open.spotify.com/show/6aHwN2E52JrqdKF28ESYF8) by Amit Varma & Ajay Shah, [Ideas of India](https://shrutiraj.com/podcast/) by Shruthi Rajagopalan
+Favourite podcasts: <br/> 
+[Seen and Unseen](https://seenunseen.in/) by Amit Varma <br/> 
+[Everything is Everything](https://open.spotify.com/show/6aHwN2E52JrqdKF28ESYF8) by Amit Varma & Ajay Shah <br/> 
+[Ideas of India](https://shrutiraj.com/podcast/) by Shruthi Rajagopalan
 
 ### Reading
 I'm a regular on [Hacker News](https://news.ycombinator.com/) and [Lobste.rs](https://lobste.rs/). 
 
-Some blogs I keep going back to:
+Some blogs I keep going back to: <br/>
 [Phil Eaton](https://notes.eatonphil.com/) · [Julia Evans](https://jvns.ca/) · [Dan Luu](https://danluu.com/) · [Charity Majors](https://charity.wtf/) · [Marc Brooker](https://brooker.co.za/blog/) · [Rachel by the Bay](https://rachelbythebay.com/w/) · [Matklad](https://matklad.github.io/) · [Mitchell Hashimoto](https://mitchellh.com/writing) · [Justine Tunney](https://justine.lol/) · [Murat Buffalo](https://muratbuffalo.blogspot.com/) · [Algorithmica HPC](https://en.algorithmica.org/hpc/complexity/hardware/) · [Cindy Sridharan](https://copyconstruct.medium.com/)
 
 If you want to chat about any of the above, drop me an email
