@@ -52,10 +52,10 @@ jvm_memory_used_bytes{area="heap"} / jvm_memory_max_bytes{area="heap"}
 ```
 
 ### Good references for understanding JVM, GC and memory monitoring:
-[Plumbr's blog on memory leak](https://medium.com/@plumbr/memory-leaks-fallacies-and-misconce-8c79594a3986)
-[Garbage Collection Patterns](https://blog.gceasy.io/interesting-garbage-collection-patterns/)
-[Uber JVM's memory tuning](https://www.uber.com/en-IN/blog/jvm-tuning-garbage-collection/)
-[Datadog GC deep dive](https://www.datadoghq.com/blog/understanding-java-gc/)
+[Plumbr's blog on memory leak](https://medium.com/@plumbr/memory-leaks-fallacies-and-misconce-8c79594a3986) <br/>
+[Garbage Collection Patterns](https://blog.gceasy.io/interesting-garbage-collection-patterns/) <br/>
+[Uber JVM's memory tuning](https://www.uber.com/en-IN/blog/jvm-tuning-garbage-collection/) <br/>
+[Datadog GC deep dive](https://www.datadoghq.com/blog/understanding-java-gc/) 
 
 ## 2. Thread Metrics
 Thread metrics are the vital signs of your application's concurrency model. A release that introduces a blocking calls, lock contention issue or thread pool misconfiguration can be diagnozed using the below metrics.
@@ -91,8 +91,57 @@ jvm_threads_states_threads{state="waiting"} + jvm_threads_states_threads{state="
 
 
 ### References for understanding threads and its states
-[Java Thread states](https://blog.fastthread.io/java-suspended-thread-states-blocked-waiting-timed_waiting/)
+[Java Thread states](https://blog.fastthread.io/java-suspended-thread-states-blocked-waiting-timed_waiting/) <br/>
 [Java Thread Dump Analysis](https://dzone.com/articles/how-analyze-java-thread-dumps)
+
+### 3. Class loading metrics
+These metrics helps us to peek through runtime class creation by libraries/framework like Spring
+
+**jvm_classes_loaded_classes** - Number of classes currently loaded. Should stabilize after startup, if it keeps growing with traffic then it is possible some library is dynamically generating classes at runtime (reflection, proxies, scripting engines, groovy template)
+
+**jvm_classes_unloadded_classes_total** - This metrics tells the number of classes that were loaded and then garbade collected. If loaded classes grow but unloaded stays flat, the classloaded is holding references which means there is a class loader leak
+
+
+### PromQL Queries:
+```PromQL
+# Loaded class count - should plateau after startup
+jvm_classes_loaded_classes
+
+# Class loading rate - should drop to approx 0 in steady state
+rate(jvm_classes_loaded_classes[5m])
+
+# Classloader leak signal: loaded growing but unloaded flat
+jvm_classes_loaded_classes - jvm_classes_unloaded_classes_total
+```
+
+**Patterns to fear**: When we add a new dependency that does bytecode generation, uses dymaic proxies or custom classloading which are common with ORMs, serialization libraries etc, we need to keep track of these metrics when we introduce them
+
+### 4. JVM Compilation
+JVM will compile the hotpath bytecode to native code. This will take some time, so if we are comparing latency between the old and new release we should taking into consideration the time taken to warm up the JVM.
+
+jvm_compilation_time_milliseconds_total - Cumulative time spent compiling, in the first few minutes after deploying the JVM, this metric will climb fast and latency might take a hit. 
+
+### PromQL Queries:
+```PromQL
+# Compilation time rate - high during warmup, should drop to near-zero
+rate(jvm_compilation_time_milliseconds_total[5m])
+
+# The below metric can be used to identify when warmup is "done" - the curve flattens
+jvm_compilation_time_milliseconds_total
+```
+
+**Patterns to Fear**
+If the JVM takes a lot of time to warmup, we might need to start to intentionally warmup the JVM to cutdown the initial latency.
+
+### References for JVM warmup
+[Usenix JVM warmup](https://www.usenix.org/conference/osdi16/technical-sessions/presentation/lion)
+[Baeldung's JVM warmup](https://www.baeldung.com/java-jvm-warmup)
+[Unpredicatability in JVM warmup](https://tratt.net/laurie/blog/2022/more_evidence_for_problems_in_vm_warmup.html)
+
+### Gotchas:
+- JVM warmup
+- Interpretation of GC metrics in AOT based JVM like Graal JVM
+
 
 ### References:
 1. https://copyconstruct.medium.com/monitoring-and-observability-8417d1952e1c
