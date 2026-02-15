@@ -1,6 +1,6 @@
 # Hi! 👋 I am Harshavardhan
 
-I'm a software engineer based in Chennai, currently at Citigroup where I work on low-latency trade processing systems, observability platforms, and developer tooling. I'm passionate about distributed systems, economics, and design — and I use this blog to reflect on all three.
+I'm a software engineer based in Chennai, currently at Citigroup where I work on low-latency trade processing systems, observability platforms, and developer tooling. I'm drawn to problems at the intersection of systems, performance, and developer experience. I use this blog to reflect on all three.
 
 I recently wrapped up my Master's in CS from Georgia Tech (OMSCS) while working full-time — would not recommend for your sleep schedule, but would recommend for everything else.
 
@@ -10,7 +10,7 @@ I recently wrapped up my Master's in CS from Georgia Tech (OMSCS) while working 
 
 ### What I'm building
 
-- **Pouch** — A privacy-focused link-sharing browser extension, an alternative to Pocket. Initial version submitted to the Chrome Web Store; working on cross-browser sync and mobile support.
+- **[Pouch](https://github.com/harshavardhan98/pouch)** — A privacy-focused link-sharing browser extension, an alternative to Pocket. Initial version submitted to the Chrome Web Store; working on cross-browser sync and mobile support.
 - **TickTockMail** — A disposable email service in the spirit of 10minutemail. Currently in the architecture and design phase.
 - **SQLite JDBC Driver** — A high-performance alternative to the Xerial SQLite driver. Early-stage research.
 
@@ -31,4 +31,4 @@ I'm a regular on [Hacker News](https://news.ycombinator.com/) and [Lobste.rs](ht
 Some blogs I keep going back to:
 [Phil Eaton](https://notes.eatonphil.com/) · [Julia Evans](https://jvns.ca/) · [Dan Luu](https://danluu.com/) · [Charity Majors](https://charity.wtf/) · [Marc Brooker](https://brooker.co.za/blog/) · [Rachel by the Bay](https://rachelbythebay.com/w/) · [Matklad](https://matklad.github.io/) · [Mitchell Hashimoto](https://mitchellh.com/writing) · [Justine Tunney](https://justine.lol/) · [Murat Buffalo](https://muratbuffalo.blogspot.com/) · [Algorithmica HPC](https://en.algorithmica.org/hpc/complexity/hardware/) · [Cindy Sridharan](https://copyconstruct.medium.com/)
 
-
+If you want to chat about any of the above, drop me an email
