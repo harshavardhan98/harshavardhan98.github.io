@@ -29,6 +29,6 @@ Favourite podcasts: [Seen and Unseen](https://seenunseen.in/) by Amit Varma, [Ev
 I'm a regular on [Hacker News](https://news.ycombinator.com/) and [Lobste.rs](https://lobste.rs/). 
 
 Some blogs I keep going back to:
-[Phil Eaton](https://notes.eatonphil.com/) · [Julia Evans](https://jvns.ca/) · [Dan Luu](https://danluu.com/) · [Charity Majors](https://charity.wtf/) · [Marc Brooker](https://brooker.co.za/blog/) · [Rachel by the Bay](https://rachelbythebay.com/w/) · [Matklad](https://matklad.github.io/) · [Mitchell Hashimoto](https://mitchellh.com/writing) · [Justine Tunney](https://justine.lol/) · [Murat Buffalo](https://muratbuffalo.blogspot.com/) · [Algorithmica HPC](https://en.algorithmica.org/hpc/complexity/hardware/)
+[Phil Eaton](https://notes.eatonphil.com/) · [Julia Evans](https://jvns.ca/) · [Dan Luu](https://danluu.com/) · [Charity Majors](https://charity.wtf/) · [Marc Brooker](https://brooker.co.za/blog/) · [Rachel by the Bay](https://rachelbythebay.com/w/) · [Matklad](https://matklad.github.io/) · [Mitchell Hashimoto](https://mitchellh.com/writing) · [Justine Tunney](https://justine.lol/) · [Murat Buffalo](https://muratbuffalo.blogspot.com/) · [Algorithmica HPC](https://en.algorithmica.org/hpc/complexity/hardware/) · [Cindy Sridharan](https://copyconstruct.medium.com/)
 
 
