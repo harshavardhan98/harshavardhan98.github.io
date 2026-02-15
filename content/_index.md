@@ -1,6 +1,6 @@
 # Hi! 👋 I am Harshavardhan
 
-I'm a software engineer based in Chennai, currently at Citigroup where I work on low-latency trade processing systems, observability platforms, and developer tooling. I'm passionate about programming, economics, and design — and I use this blog to reflect on all three.
+I'm a software engineer based in Chennai, currently at Citigroup where I work on low-latency trade processing systems, observability platforms, and developer tooling. I'm passionate about distributed systems, economics, and design — and I use this blog to reflect on all three.
 
 I recently wrapped up my Master's in CS from Georgia Tech (OMSCS) while working full-time — would not recommend for your sleep schedule, but would recommend for everything else.
 
@@ -26,18 +26,9 @@ I recently wrapped up my Master's in CS from Georgia Tech (OMSCS) while working 
 Favourite podcasts: [Seen and Unseen](https://seenunseen.in/) by Amit Varma, [Everything is Everything](https://open.spotify.com/show/6aHwN2E52JrqdKF28ESYF8) by Amit Varma & Ajay Shah, [Ideas for India](https://www.ideasforindia.in/) by Shruti Rajagopalan.
 
 ### Reading
-I spend a lot of time on Hackernews and Lobste.rs
+I'm a regular on [Hacker News](https://news.ycombinator.com/) and [Lobste.rs](https://lobste.rs/). 
 
-Favourite Programming Blogs:
-1. [Phil Eaton's blog](https://notes.eatonphil.com/)
-2. [Matklad's blog](https://matklad.github.io/)
-3. [Mitchell Hashimoto's blog](https://mitchellh.com/writing)
-4. [Algorithmica HPC](https://en.algorithmica.org/hpc/complexity/hardware/)
-5. [Charity Majors' Blog](https://charity.wtf/)
-6. [Murat's Blog](https://muratbuffalo.blogspot.com/)
-7. [DanLuu's Blog](https://danluu.com/)
-8. [Julia Evan's Blog](https://jvns.ca/)
-9. [Marc Brooker's Blog](https://brooker.co.za/blog/)
-10. [Justine Tunney's Blog](https://justine.lol/)
-11. [Rachel By the Bay](https://rachelbythebay.com/w/)
+Some blogs I keep going back to:
+[Phil Eaton](https://notes.eatonphil.com/) · [Julia Evans](https://jvns.ca/) · [Dan Luu](https://danluu.com/) · [Charity Majors](https://charity.wtf/) · [Marc Brooker](https://brooker.co.za/blog/) · [Rachel by the Bay](https://rachelbythebay.com/w/) · [Matklad](https://matklad.github.io/) · [Mitchell Hashimoto](https://mitchellh.com/writing) · [Justine Tunney](https://justine.lol/) · [Murat Buffalo](https://muratbuffalo.blogspot.com/) · [Algorithmica HPC](https://en.algorithmica.org/hpc/complexity/hardware/)
+
 
