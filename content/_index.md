@@ -23,7 +23,7 @@ I recently wrapped up my Master's in CS from Georgia Tech (OMSCS) while working 
 
 ### Listening to
 
-Favourite podcasts: [Seen and Unseen](https://seenunseen.in/) by Amit Varma, [Everything is Everything](https://open.spotify.com/show/6aHwN2E52JrqdKF28ESYF8) by Amit Varma & Ajay Shah, [Ideas for India](https://www.ideasforindia.in/) by Shruti Rajagopalan.
+Favourite podcasts: [Seen and Unseen](https://seenunseen.in/) by Amit Varma, [Everything is Everything](https://open.spotify.com/show/6aHwN2E52JrqdKF28ESYF8) by Amit Varma & Ajay Shah, [Ideas of India](https://shrutiraj.com/podcast/) by Shruthi Rajagopalan
 
 ### Reading
 I'm a regular on [Hacker News](https://news.ycombinator.com/) and [Lobste.rs](https://lobste.rs/). 
